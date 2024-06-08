@@ -1,7 +1,7 @@
 - name: Variable Prefernce
   hosts: web
-  vars: 
-    wishes: Morning from variable declaration level
+  # vars: 
+  #   wishes: Morning from variable declaration level
 
   # vars_files:
   #   - variables.yaml
@@ -23,4 +23,4 @@
 # 2. Task level
 # 3. vars_files level
 # 4. prompt level
-# 5. 
+# 5. vars: variable declaration level
