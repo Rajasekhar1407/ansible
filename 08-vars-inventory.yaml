@@ -1,6 +1,8 @@
-- name: ping the server
+# we can declare variables in inventory file and refer here 
+- name: calling variables from inventory file
   hosts: web
 
   tasks:
-  - name: pinging the server
-    ansible.builtin.ping:
+  - name: print information
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{course}} from trainer {{trainer}} and duration is {{duration}}"
