@@ -2,12 +2,11 @@
 - name: calling variables from inventory file
   hosts: web
 
-  # tasks:
-  # - name: print information
-  #   ansible.builtin.debug:
-  #     msg: "Hi, I am learning {{course}} from trainer {{trainer}} and duration is {{duration}}"
-
   tasks:
+  - name: print information
+    ansible.builtin.debug:
+      msg: "Hi, I am learning {{course}} from trainer {{trainer}} and duration is {{duration}}"
+
   - name: print information with additional variable
     vars:
       timings: 07:15 AM
