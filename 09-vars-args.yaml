@@ -1,0 +1,7 @@
+- name: Variables from Arguments
+  hosts: web
+
+  tasks:
+  - name: print information
+    ansible.builtin.debug:
+      msg: "Hello {{person}}, Good {{wishes}}"

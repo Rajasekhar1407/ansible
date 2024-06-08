@@ -7,6 +7,7 @@
     ansible.builtin.debug:
       msg: "Hi, I am learning {{course}} from trainer {{trainer}} and duration is {{duration}}"
 
+# we can declare variables in inventory file and refer here also, we can add variables if require
   - name: print information with additional variable
     vars:
       timings: 07:15 AM
