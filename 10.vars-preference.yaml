@@ -14,7 +14,11 @@
   
   tasks: 
   - name: check preference
-    vars:
-      wishes: Morning from task level
+    # vars:
+    #   wishes: Morning from task level
     ansible.builtin.debug:
       msg: "Hellow, Good {{wishes}}"
+
+# 1. Argument level (in comand line pass variable like --extra-vars "wishes=Morning-from-Arguments")
+# 2. Task level
+# 3. 
