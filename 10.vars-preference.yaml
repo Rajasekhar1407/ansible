@@ -1,5 +1,5 @@
 - name: Variable Prefernce
-  hosts: web
+  hosts: localhost
   # vars: 
   #   wishes: Morning from variable declaration level
 
@@ -19,8 +19,11 @@
     ansible.builtin.debug:
       msg: "Hellow, Good {{wishes}}"
 
+# Preference will be like below
 # 1. Argument level (in comand line pass variable like --extra-vars "wishes=Morning-from-Arguments")
 # 2. Task level
 # 3. vars_files level
 # 4. prompt level
 # 5. vars: variable declaration level
+# 6. Inventory file level
+# 7. role level (will verify this later)
