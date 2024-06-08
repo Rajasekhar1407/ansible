@@ -1,0 +1,14 @@
+- name: Variables
+  hosts: web
+  vars:
+    course: Terraform
+    trainer: Rajasekhar
+    duration: 15 hours
+
+  tasks:
+  - name: overwrite variables from task level
+    vars: # Task level variable
+      course: DevOps with AWS
+      duration: 120 hours
+    ansible.builtin.debug:
+      msg: "Hellow, I am learning {{course}} from trainer {{trainer}} and duration is {duration}"
