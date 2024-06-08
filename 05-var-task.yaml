@@ -1,18 +1,18 @@
 - name: Variables
   hosts: web
-  vars:
+  vars: # variable declaration
     course: Terraform
     trainer: Rajasekhar
     duration: 15 hours
 
   tasks:
   - name: overwrite variables from task level
-    vars: # Task level variable
+    vars: # Task level variable, from this we can overwrite above declared variables
       course: DevOps with AWS
       duration: 120 hours
     ansible.builtin.debug:
       msg: "Hellow, I am learning {{course}} from trainer {{trainer}} and duration is {{duration}}"
 
-  - name: overwrite variables from task level
+  - name: print information
     ansible.builtin.debug:
       msg: "Hellow, I am learning {{course}} from trainer {{trainer}} and duration is {{duration}}"
