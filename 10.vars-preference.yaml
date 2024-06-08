@@ -3,8 +3,8 @@
   vars: 
     wishes: Morning from variable declaration level
 
-  vars_files:
-    - variables.yaml
+  # vars_files:
+  #   - variables.yaml
 
   vars_prompt:
     - name: wishes
@@ -21,4 +21,5 @@
 
 # 1. Argument level (in comand line pass variable like --extra-vars "wishes=Morning-from-Arguments")
 # 2. Task level
-# 3. 
+# 3. vars_files level
+# 4. 
