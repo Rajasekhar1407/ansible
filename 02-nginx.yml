@@ -1,30 +1,30 @@
-# - name: install and run nginx
-#   hosts: web
-#   become: yes # equal to -b in adhoc commands, root access
-#   tasks:
-#     - name: install nginx
-#       ansible.builtin.dnf:
-#       name: nginx
-#       state: latest
-
-#     - name: start nginx
-#       ansible.builtin.service:
-#       name: nginx
-#       state: start
-#       enabled: yes
-
-
-- name: Install and run NGINX
+- name: install and run nginx
   hosts: web
-  become: yes
+  become: yes # equal to -b in adhoc commands, root access
   tasks:
-    - name: Install NGINX
+    - name: install nginx
       ansible.builtin.dnf:
         name: nginx
         state: latest
 
-    - name: Start and enable NGINX
+    - name: start nginx
       ansible.builtin.service:
         name: nginx
-        state: started
+        state: start
         enabled: yes
+
+
+# - name: Install and run NGINX
+#   hosts: web
+#   become: yes
+#   tasks:
+#     - name: Install NGINX
+#       ansible.builtin.dnf:
+#         name: nginx
+#         state: latest
+
+#     - name: Start and enable NGINX
+#       ansible.builtin.service:
+#         name: nginx
+#         state: started
+#         enabled: yes
