@@ -1,7 +1,7 @@
 - name: Variable Prefernce
   hosts: localhost
-  # vars: 
-  #   wishes: Morning from variable declaration level
+  vars: 
+    wishes: "Morning from variable declaration level"
 
   # vars_files:
   #   - variables.yaml
