@@ -5,3 +5,4 @@
   - name: print information
     ansible.builtin.debug:
       msg: "Hello {{person}}, Good {{wishes}}"
+# we can pass variables from command line like    --extra-vars "person=Rajasekhar wishes=Morning"
