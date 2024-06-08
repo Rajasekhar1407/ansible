@@ -1,9 +1,9 @@
-- name: calling variable from file
+- name: Variables from file
   hosts: web
-  vars_files:
+  vars_files: # calling variables from file
   - varables.yaml
 
   tasks:
-  - name: print the information
+  - name: Print the information
     ansible.builtin.debug:
       msg: "Hellow, I am learning {{course}} from trainer {{trainer}} and duration is {{duration}}"
