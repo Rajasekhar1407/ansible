@@ -11,4 +11,8 @@
       course: DevOps with AWS
       duration: 120 hours
     ansible.builtin.debug:
-      msg: "Hellow, I am learning {{course}} from trainer {{trainer}} and duration is {duration}"
+      msg: "Hellow, I am learning {{course}} from trainer {{trainer}} and duration is {{duration}}"
+
+  - name: overwrite variables from task level
+    ansible.builtin.debug:
+      msg: "Hellow, I am learning {{course}} from trainer {{trainer}} and duration is {{duration}}"
