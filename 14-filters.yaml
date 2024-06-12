@@ -1,5 +1,5 @@
 - name: default values
-  hosts: web
+  hosts: localhost
 
   tasks:
   - name: default values
