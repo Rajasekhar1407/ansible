@@ -6,15 +6,15 @@
 
 tasks:
   - name: check user exits or not
-      ansible.builtin.command: id expense
+    ansible.builtin.command: id expense
     # "ansible.builtin.command" by using this we can execute commands directly in play books
-      register: USER
+    register: USER
     # "register" keyword is to capture the result of above task.
 
   - name: Check the command result
-  fail:
-    msg: "The command failed with exit status {{ USER.rc }}"
-  when: USER.rc != 0
+    fail:
+      msg: "The command failed with exit status {{ USER.rc }}"
+    when: USER.rc != 0
 
   - name: print user information
     ansible.builtin.debug:
