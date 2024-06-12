@@ -11,7 +11,7 @@
     DevOps: 3                 # number
     AWS: 2
     Docker: 1
-  real_project: true          # boolen
+  real_project: "true"          # boolen
 
   tasks:
   - name: Print the information
