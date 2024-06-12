@@ -4,28 +4,28 @@
 # This example runs some_command (id expense) and registers the result in the variable command_result (USER).
 # If the return code (rc) is not zero, the playbook will fail with a message indicating the error.
 
-tasks:
-  - name: check user exits or not
-    ansible.builtin.command: id expense
-    # "ansible.builtin.command" by using this we can execute commands directly in play books
-    register: USER
-    # "register" keyword is to capture the result of above task.
-    ignore_errors: true
-    # Using ignore_errors to continue execution even if the command fails
+  tasks:
+    - name: check user exits or not
+      ansible.builtin.command: id expense
+      # "ansible.builtin.command" by using this we can execute commands directly in play books
+      register: USER
+      # "register" keyword is to capture the result of above task.
+      ignore_errors: true
+      # Using ignore_errors to continue execution even if the command fails
 
-  - name: Check the command result
-    fail:
-      msg: "The command failed with exit status {{ USER.rc }}"
-    when: USER.rc != 0
-    # Execute fail task only if the return code is not zero
+    - name: Check the command result
+      fail:
+        msg: "The command failed with exit status {{ USER.rc }}"
+      when: USER.rc != 0
+      # Execute fail task only if the return code is not zero
 
-  - name: print user information
-    ansible.builtin.debug:
-      msg: "User info: {{ USER }}"
+    - name: print user information
+      ansible.builtin.debug:
+        msg: "User info: {{ USER }}"
 
-  - name: create user if not exists
-    ansible.builtin.command: useradd expense
-    when: USER.rc ! = 0 
+    - name: create user if not exists
+      ansible.builtin.command: useradd expense
+      when: USER.rc ! = 0 
     # Create user only if the return code from 'id expense' is not zero
 
 # In this playbook:
