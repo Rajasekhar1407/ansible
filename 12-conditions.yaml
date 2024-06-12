@@ -1,5 +1,5 @@
-name: conditions
-hosts: web
+- name: conditions
+  hosts: web
 
 # This example runs some_command (id expense) and registers the result in the variable command_result (USER).
 # If the return code (rc) is not zero, the playbook will fail with a message indicating the error.
