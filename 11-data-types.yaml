@@ -11,9 +11,9 @@
     DevOps: 3 # number
     AWS: 2
     Docker: 1
-  RealProject: true # boolen
+  real_project: true # boolen
 
   tasks:
   - name: Print the information
     ansible.builtin.debug:
-      msg: "Course: {{course}}, Tools covered: {{tools}}, Experience is: {{experiance}}, is it Real Project {{RealProject}}"
+      msg: "Course: {{course}}, Tools covered: {{tools}}, Experience is: {{experiance}}, is it Real Project {{real_project}}"
