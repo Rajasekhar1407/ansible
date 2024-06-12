@@ -7,18 +7,21 @@
     private: false
 
 # Ansible is strict, it can't automatically convert text into number
-# 10 --> text, we need to convert text in to integer by using filter. filter is denoted by | (pipe symbol)
+# 10 --> text
+# if you give other than number then it will treat as zero
 
   tasks:
   - name: number is less than 10
     ansible.builtin.debug:
       msg: "Given number is {{ number }} less than 10"
     when: number | int < 10
+    # filter is denoted by | (pipe symbol)
 
   - name: number is greater than or equal to 10
     ansible.builtin.debug:
-      msg: "Given number is {{ number }} gratet than or equal to 10"
+      msg: "Given number is {{ number }} greater than or equal to 10"
     when: number | int >= 10
+
 
 # - hosts: localhost
 #   vars_prompt:
