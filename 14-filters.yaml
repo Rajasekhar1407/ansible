@@ -15,3 +15,13 @@
   - name: convert into upper case
     ansible.builtin.debug:
       msg: " {{ greetings | upper }}"
+
+- name: lower case
+  hosts: web
+  vars:
+    greetings: "Hello, GOOD MORNING"
+
+  tasks:
+  - name: convert in to lower case
+    ansible.builtin.debug:
+      msg: "{{ greetings | lower }}"
