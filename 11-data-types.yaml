@@ -16,4 +16,8 @@
   tasks:
   - name: Print the information
     ansible.builtin.debug:
-      msg: "Course: {{ course }}, Tools covered: {{ tools }}, Experience is: {{ experiance }}, is it Real Project {{ RealProject }}"
+      msg: > 
+        Course: {{ course }}, 
+        Tools covered: {{ tools }}, 
+        Experience is: {{ experiance }}, 
+        is it Real Project {{ RealProject }}
