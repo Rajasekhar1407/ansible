@@ -9,7 +9,7 @@
 # 10 --> text, we need to convert text in to integer by using filter. filter is denoted by | (pipe symbol)
 
   tasks:
-  - nmae: number is less than 10
+  - name: number is less than 10
     ansible.builtin.debug:
       msg: "Given number is {{ number }} less than 10"
     when: number | int < 10
