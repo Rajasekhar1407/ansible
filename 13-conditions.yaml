@@ -19,7 +19,6 @@
       msg: "Given number is {{number}} gratet than or equal to 10"
     when: number | int >= 10
 
----
 # - hosts: localhost
 #   vars_prompt:
 #     name: number
