@@ -11,12 +11,12 @@
   tasks:
   - nmae: number is less than 10
     ansible.builtin.debug:
-      msg: "Given number is {{number}} less than 10"
+      msg: "Given number is {{ number }} less than 10"
     when: number | int < 10
 
   - name: number is greater than or equal to 10
     ansible.builtin.debug:
-      msg: "Given number is {{number}} gratet than or equal to 10"
+      msg: "Given number is {{ number }} gratet than or equal to 10"
     when: number | int >= 10
 
 # - hosts: localhost
