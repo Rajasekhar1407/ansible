@@ -25,7 +25,7 @@
         msg: "User info: {{ USER }}"
 
     - name: create user if not exists
-      ansible.builtin.command: useradd expense
+      ansible.builtin.command: sudo useradd expense
       when: USER.rc !=0 
     # Create user only if the return code from 'id expense' is not zero
 
