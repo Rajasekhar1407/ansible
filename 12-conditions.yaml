@@ -17,6 +17,7 @@
       fail:
         msg: "The command failed with exit status {{ USER.rc }}"
       when: USER.rc != 0
+      ignore_errors: true
       # Execute fail task only if the return code is not zero
 
     - name: print user information
