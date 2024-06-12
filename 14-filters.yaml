@@ -1,16 +1,17 @@
-# - name: default values
-#   hosts: localhost
-#   gather_facts: no
-
-#   tasks:
-#   - name: default values
-#     ansible.builtin.debug:
-#       msg: "Hello {{ course | default('Ansible') }}"
-
-
 - name: default value
   hosts: localhost
+
   tasks:
   - name: print default value
     ansible.builtin.debug:
-      msg: "Hello {{course | default('Ansible') }}"
+      msg: "Hello {{ course | default('Ansible') }}"
+
+- name: upper case
+  hosts: localhost
+  vars:
+    greetings: "Hi, Good Morning"
+
+  tasks:
+  - name: convert into upper case
+    ansible.builtin.debug:
+      msg: " {{ greetings | upper }}"
