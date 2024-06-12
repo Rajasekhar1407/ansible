@@ -4,6 +4,7 @@
   vars_prompt: # prompts are always considered as text/string
   - name: number
     prompt: Please enter number
+    private: false
 
 # Ansible is strict, it can't automatically convert text into number
 # 10 --> text, we need to convert text in to integer by using filter. filter is denoted by | (pipe symbol)
