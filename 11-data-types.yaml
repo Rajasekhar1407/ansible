@@ -11,7 +11,7 @@
     DevOps: 3                 # number
     AWS: 2
     Docker: 1
-  RealProject: true          # boolen
+  # RealProject: true          # boolen
 
   tasks:
   - name: Print the information
@@ -20,4 +20,4 @@
         Course: {{ course }}, 
         Tools covered: {{ tools }}, 
         Experience is: {{ experiance }}, 
-        is it Real Project {{ RealProject }}
+      # is it Real Project {{ RealProject }}
