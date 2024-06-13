@@ -5,5 +5,7 @@
   - name: command
     ansible.builtin.command: "echo 'Hi, this is from command module' > /tmp/command.txt "
 
+# these two are not working, will see later
+
   - name: shell
     ansible.builtin.shell: 'echo "Hello, I am from shell" > "/tmp/shell.txt" '
