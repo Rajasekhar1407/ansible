@@ -1,6 +1,6 @@
 - name: Install and run NGINX
   hosts: web
-  become: yes # equal to -b in adhoc commands, root access
+  become: yes # equal to -b in adhoc commands, this will give root access
   tasks:
     - name: Install NGINX
       ansible.builtin.dnf:
