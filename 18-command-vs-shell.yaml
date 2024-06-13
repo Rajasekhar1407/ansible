@@ -3,7 +3,7 @@
 
   tasks:
   - name: command
-    ansible.builtin.command: echo "Hello, I am from Command line" > "/tmp/command.txt"
+    ansible.builtin.command: 'echo "Hello, I am from Command line" > "/tmp/command.txt" '
 
    - name: shell
-    ansible.builtin.shell: echo "Hello, I am from shell" > "/tmp/shell.txt"
+    ansible.builtin.shell: 'echo "Hello, I am from shell" > "/tmp/shell.txt" '
